@@ -1,22 +1,40 @@
 let stack = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-let position = 2;
-let getItemResult = stack[2];
+//task 1
+let position = 5;
+let getItemResult = stack[position];
 
-let replacementCard = 6;
-stack[7] = replacementCard;
+//task 2
+position = 6;
+let replacementCard = 17;
+stack[position] = replacementCard;
 
-let newCardTop = 15;
-stack.unshift(15);
+//task 3
+let newCardTop = 25;
+stack.unshift(newCardTop);
 
-stack.splice(3,1);
+//task 4
+position = 8;
+stack.splice(position, 1)
 
-stack.splice(0);
+//task 5
+stack.shift()
 
+//task 6
 let newCardBotom = 18;
 stack.push(newCardBotom)
+//.push() built in method that appends an item at the end of an array
 
-stack.pop();
+//task 7
+stack.pop()
+//.pop() built in method removes item at the end of the array(list)
 
-let stackSize = 20;
-let checkSizeOfStackResult = stackSize == stack.length;
-console.log(checkSizeOfStackResult);
+//task 8
+let stackSize = 9;
+let checkSizeOfStackResult
+if (stackSize == stack.length) {
+    checkSizeOfStackResult = true;}
+else {
+    checkSizeOfStackResult = false;
+}
+
+/*let checkSizeOfStackResult = stack.length === stackSize*/
