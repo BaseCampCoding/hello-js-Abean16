@@ -1,21 +1,39 @@
+//task 1
 let kind = "car";
+let needsLicenseResult =;
 
-let needsLicenseResult = true;
+if (kind === 'car' || kind === 'true'){
+    needsLicenseResult = true
+}
+else{
+    needsLicenseResult = false
+}
 
+
+//task 2
 let option1 = "Honda";
 let option2 = "Nissian";
 
-let chooseVehicleResult = Array.prototype.sort + " is clearly the better choice.";
+let chooseVehicleResult;
+if (option1 > option2){
+    chooseVehicleResult = option2 + " is clearly the better choice.";
+}
+else{
+    chooseVehicleResult = option1 + " is clearly the better choice.";
+}
 
-let originalPrice = 1000;
+///task 3
+let originalPrice = 10000;
 let age = 5;
-let calculateResellPriceResult; 
-    if (age < 5) {
-        originalPrice * 0.8
-    } else if (age > 10) {
-        originalPrice * 0.5
-    } else if (age >= 3 && age > 10) {
-        originalPrice * 0.70
-    }
-console.log("hello");
-console.log(calculateResellPriceResult);
+let calculateResellPriceResult;
+
+if (age < 3){
+    calculateResellPriceResult = originalPrice * 0.8;
+}
+else if(age > 10){
+    calculateResellPriceResult = originalPrice * 0.5;
+}
+else if (age >= 3 && age < 10){
+    calculateResellPriceResult = originalPrice * 0.7;
+}
+
