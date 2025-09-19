@@ -9,9 +9,9 @@ let twoSum = Number(number1) + Number(number2);
 
 //task 2
 let luckyInput = 123214;
-let luckyInputStr = "anna";
+let luckyInputStr = luckyInput.toString().split('').reverse().join('');
 let LuckyNumber;
-if (parseFloat(luckyInput.toString().split('').reverse().join('')) === luckyInput) {
+if (parseFloat(luckyInputStr) === luckyInput) {
     LuckyNumber = true;
 }
 else {
@@ -19,3 +19,11 @@ else {
 }
 
 console.log(LuckyNumber)
+
+//task 3
+let userInput;
+let errorMessage;
+
+// if ( ){
+
+// }
