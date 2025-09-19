@@ -32,4 +32,27 @@ else{
     ticketStatusResult = `sold to ${tickets[ticketIdToCheck]}`
 }
 
-console.log(ticketStatusResult)
+//task 4
+let simpleTicketStatusResult;
+if (!(tickets[ticketIdToCheck] === null)) {
+    simpleTicketStatusResult = `${tickets[ticketIdToCheck]}`
+}
+else {
+    simpleTicketStatusResult = "invalid ticket !!!"
+}
+
+//task 5
+const visitorWithGtc = {
+    gtc: {
+        version: 1.0
+    }
+}
+
+let gtcVersion;
+
+if (visitorWithGtc.gtc && visitorWithGtc.gtc.version) {
+    gtcVersion = visitorWithGtc.gtc.version;
+}
+else {
+    gtcVersion = null;
+}
