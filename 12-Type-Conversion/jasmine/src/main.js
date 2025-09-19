@@ -8,7 +8,7 @@ let number2 = digits2.join("");
 let twoSum = Number(number1) + Number(number2);
 
 //task 2
-let luckyInput = 123214;
+let luckyInput = 12321;
 let luckyInputStr = luckyInput.toString().split('').reverse().join('');
 let LuckyNumber;
 if (parseFloat(luckyInputStr) === luckyInput) {
@@ -18,12 +18,18 @@ else {
     LuckyNumber = false;
 }
 
-console.log(LuckyNumber)
-
 //task 3
-let userInput;
+let userInput = "12321";
 let errorMessage;
 
-// if ( ){
+if (userInput === null || userInput.length === 0) {
+    errorMessage = "Required field";
+}
+else if (userInput === '0') {
+    errorMessage = "Must be a number besides 0";
+}
+else {
+    errorMessage = " ";
+}
 
-// }
+console.log(errorMessage)
