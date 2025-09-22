@@ -22,8 +22,8 @@ scoreBoard[newPlayerName] = newPlayerScore + scoreToAdd;
 
 //task 5
 let mondayBonus = 100;
-for (let key in scoreBoard) {
-    scoreBoard[key] += mondayBonus;
+for (let player in scoreBoard) {
+    scoreBoard[player] += mondayBonus;
 }
 
 console.log(scoreBoard)

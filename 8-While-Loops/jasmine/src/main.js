@@ -40,8 +40,8 @@ while (wedgesCut < wedgesNeeded && i < limes.length) {
 let timeLeft = 4;
 let orders = ["Pure Strawberry Joy", "Energizer", "Tropical Island", "Green Garden", "All or Nothing"]
 let totalTime = 0;
-let ordertrack = [];
-let index = 0;
+let orderIndex = 0;
+let orderTrack = []
 
 for(let i = 0; i < orders.length; i++){
 let juice = orders[i];
@@ -65,6 +65,31 @@ let juice = orders[i];
     totalTime += timeToMixJuiceResult;
 } 
 
-while (totalTime < timeLeft &&  index < orderTrack){
-
+while (totalTime < timeLeft &&  orderIndex < orders.length){
+    if (orders[orderIndex] == "Pure Strawberry Joy") {
+        totalTime += 0.5;
+    }
+    else if (orders[orderIndex] == "Green Garden" || orders[orderIndex] == "Energizer") {
+        totalTime += 1.5;
+    }
+    else if (orders[orderIndex] == "Tropical Island") {
+        totalTime += 3;
+    }
+    else if (orders[orderIndex] == "All or Nothing") {
+        totalTime += 5;
+    }
+    else{
+        totalTime += 2.5;
+    }
+    orderIndex += 1;
 }
+
+let remainingOrders = [];
+if (orderIndex < orders.length) {
+    remainingOrders.push(orders[orderIndex])
+    for(let t = orderIndex; t < orders.length; t++){
+        remainingOrders.push(orders[t])
+    }
+}
+
+console.log(remainingOrders)

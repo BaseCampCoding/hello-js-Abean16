@@ -34,12 +34,13 @@ else{
 
 //task 4
 let simpleTicketStatusResult;
-if (!(tickets[ticketIdToCheck] === null)) {
-    simpleTicketStatusResult = `${tickets[ticketIdToCheck]}`
+if(ticketIdToCheck in tickets && tickets[ticketIdToCheck]){
+    simpleTicketStatusResult = tickets[ticketIdToCheck]
 }
 else {
     simpleTicketStatusResult = "invalid ticket !!!"
 }
+console.log(simpleTicketStatusResult)
 
 //task 5
 const visitorWithGtc = {
