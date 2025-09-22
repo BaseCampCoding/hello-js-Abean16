@@ -16,7 +16,7 @@ visitor.ticketId = null
 const tickets = {
     1738: "Dani",
     1739: null,
-    1740: null,
+    1740: null
 }
 
 let ticketIdToCheck = 1739;
@@ -40,20 +40,15 @@ if(ticketIdToCheck in tickets && tickets[ticketIdToCheck]){
 else {
     simpleTicketStatusResult = "invalid ticket !!!"
 }
-console.log(simpleTicketStatusResult)
 
 //task 5
 const visitorWithGtc = {
-    gtc: {
-        version: 1.0
-    }
+    name: "Dani",
+    gtc:{version: "v2.0"}
 }
 
 let gtcVersion;
 
 if (visitorWithGtc.gtc && visitorWithGtc.gtc.version) {
     gtcVersion = visitorWithGtc.gtc.version;
-}
-else {
-    gtcVersion = null;
 }
